@@ -46,7 +46,7 @@ let usuarioStorage = localStorage.getItem("usuario");
 
 //Ingreso de usuario
 if(usuarioStorage){
-  usuario = usuarioStorage;
+  usuario = usuarioStorage.toLowerCase();
   Swal.fire({
     title: 'Bienvenido '+ usuario,
     text: 'Continuar',
@@ -62,7 +62,7 @@ if(usuarioStorage){
   while(usuario.toLowerCase()!= "admin" && usuario.toLowerCase()!= "usuario"){
     usuario = prompt("Valor incorrecto \nPor favor ingresa tu usuario: \n- Admin\n- Usuario");
   }
-  localStorage.setItem("usuario", usuario);
+  localStorage.setItem("usuario", usuario.toLowerCase());
 }
 
 //Para deshabilitar las opciones no deseadas para el usuario "usuario"
@@ -113,6 +113,13 @@ if(localStorage.getItem("usuario")==="admin"){
                 lineaPlaca.value = '';
                 imeiPlaca.value = '';
                 fallaLinea.value = '';
+                Swal.fire({
+                    position:'bottom-end',
+                    icon: 'success',
+                    title: 'Guardado correctamente',
+                    showConfirmButton: false,
+                    timer:1000,
+                  });
             }else{
                 Swal.fire({
                     title: 'Error!',
@@ -161,6 +168,13 @@ if(localStorage.getItem("usuario")==="admin"){
                 lineaPantalla.value = '';
                 imeiPantalla.value = '';
                 fallaLinea.value = '';
+                Swal.fire({
+                    position:'bottom-end',
+                    icon: 'success',
+                    title: 'Guardado correctamente',
+                    showConfirmButton: false,
+                    timer:1000,
+                  });
             }else{
                 Swal.fire({
                     title: 'Error!',
@@ -228,6 +242,13 @@ if(localStorage.getItem("usuario")==="admin"){
                     }
                     darSalida.value = '';
                     estadoFinal.value = '';
+                    Swal.fire({
+                        position:'bottom-end',
+                        icon: 'success',
+                        title: 'Guardado correctamente',
+                        showConfirmButton: false,
+                        timer:1000,
+                      });
                 }else{
                     Swal.fire({
                         title: 'Error!',
