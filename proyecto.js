@@ -83,6 +83,15 @@ if(localStorage.getItem("usuario") === "usuario"){
     modalOutDisable.id = "modalPantallaDisabled";
 }
 
+let usuarioActivo = document.getElementById("usuarioActivo");
+usuario === "usuario"? usuarioActivo.innerHTML="Usuario: OPERADOR":(usuario === "admin"? usuarioActivo.innerHTML="Usuario: ADMINISTRATIVO" : usuarioActivo.innerHTML="");
+
+let usuarioDescripcion = document.getElementById("usuarioDescripcion");
+
+usuario === "usuario" && (usuarioDescripcion.innerHTML = "Solo podrá ver los reportes");
+usuario === "admin" && (usuarioDescripcion.innerHTML = "Podrá ingresar y egresar elementos");
+
+
 //Opciones habilitadas para el usuario "admin"
 if(localStorage.getItem("usuario")==="admin"){
 // Funcionamiento del modal de placas

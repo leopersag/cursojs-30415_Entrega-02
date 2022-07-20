@@ -25,6 +25,22 @@
 </head>
 <body>
 
+    <header>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <h5 id="usuarioActivo" class="text-white h4"></h5>
+                <span id="usuarioDescripcion" class="text-muted"></span>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid justify-content-start">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
     <Main class="divPrincipal">
 
         <!-- Ingreso de elementos -->
@@ -190,7 +206,7 @@
 
         <div class="divLogout"> 
             <!-- Boton para logout -->
-            <button id="btnLogOut" type="button" class="btn btn-dark">Logout</button>
+            <button id="btnLogOut" type="button" class="btn btn-dark"><a href="./index.html">Logout</a></button>
         </div>
 
     </Main>
